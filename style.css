@@ -1,0 +1,186 @@
+.navbar-brand { font-weight: bold; }
+        .search-bar { width: 50%; }
+        .header-section { background-color: #fbfcfd; padding: 20px 0; }
+        .header-content { display: flex; align-items: center; justify-content: space-between; }
+        .header-content .search-bar { margin: 0 20px; flex-grow: 1; }
+        .header-content .nav-links { display: flex; gap: 20px; }
+        .categories { margin-top: 20px; }
+        .categories a { text-decoration: none; color: #faf9f9; font-weight: bold; }
+        .categories a:hover { color: #f4f5f7; }
+        .carousel-item img { 
+            border-radius: 10px; 
+            width: 100%; 
+            height: 300px;
+            object-fit: cover; 
+        }
+        .product-listing img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .product-listing {
+            margin-top: 20px;
+        }
+        .product-listing .col-md-3 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .product-listing .col-md-3 {
+                flex: 0 0 50%; /* 2 products per row on tablets and smaller screens */
+                max-width: 50%;
+            }
+        }
+        @media (max-width: 576px) {
+            .product-listing .col-md-3 {
+                flex: 0 0 100%; /* 1 product per row on mobile screens */
+                max-width: 100%;
+            }
+        }
+        .carousel-item img {
+            border-radius: 10px;
+            height: 250px;
+            object-fit: cover;
+        }
+        
+        .carousel-control-prev, .carousel-control-next {
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+        
+        /* Make carousel responsive */
+        @media (max-width: 768px) {
+            .col-md-4 {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .col-md-4 {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+
+        .footer {
+            background-color: #2a3b4c;
+            color: white;
+            padding: 40px 0;
+        }
+        
+        .footer .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+        
+        .footer h5 {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        
+        .footer ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .footer ul li {
+            font-size: 14px;
+            margin-bottom: 5px;
+            cursor: pointer;
+        }
+        
+        .footer ul li:hover {
+            text-decoration: underline;
+        }
+        
+        .social-icons i {
+            font-size: 24px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        
+        .app-icons img {
+            width: 120px;
+            margin-right: 10px;
+        }
+        
+        .trust-section {
+            text-align: center;
+            padding: 20px 0;
+        }
+        
+        .payment-methods {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 10px 0;
+        }
+        
+        .payment-methods img {
+            width: 50px;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+        }
+        
+        .header-section {
+            background-color: #f8f9fa;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo {
+            max-height: 50px;
+        }
+        
+        .carousel-item img {
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        
+        .carousel-item img:hover {
+            transform: scale(1.05);
+        }
+        
+        .card {
+            transition: transform 0.3s ease;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .footer {
+            background-color: #343a40;
+        }
+        
+        .social-icons i {
+            font-size: 1.5rem;
+            margin: 0 10px;
+            color: #fff;
+            transition: color 0.3s ease;
+        }
+        
+        .social-icons i:hover {
+            color: #007bff;
+        }
+        
+        .payment-methods img {
+            max-height: 40px;
+            margin: 0 10px;
+            transition: transform 0.3s ease;
+        }
+        
+        .payment-methods img:hover {
+            transform: scale(1.1);
+        }        
+        

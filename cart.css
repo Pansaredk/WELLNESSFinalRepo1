@@ -1,0 +1,276 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+/* Cart Container Styles */
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container h2 {
+  text-align: center;
+  color: green;
+  margin-bottom: 20px;
+}
+
+/* Cart Items Styles */
+#cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cart-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item-image img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.cart-item-details {
+  flex-grow: 1;
+}
+
+.cart-item-details span {
+  font-size: 16px;
+  color: #333;
+}
+
+.cart-item button {
+  background-color: #ff4444;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.cart-item button:hover {
+  background-color: #cc0000;
+}
+
+/* Quantity Adjustment Styles */
+.quantity-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.quantity-control button {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.quantity-control button:hover {
+  background-color: rgb(14, 14, 14);
+}
+
+/* Empty Cart Message Styles */
+#empty-cart-message {
+  text-align: center;
+  color: #666;
+  font-size: 18px;
+  display: none; /* Hidden by default */
+}
+
+/* Total Amount Styles */
+#totalAmount {
+  text-align: right;
+  font-size: 18px;
+  font-weight: bold;
+  color: green;
+  margin-top: 20px;
+}
+
+/* Checkout Button Styles */
+#checkoutBtn {
+  display: block;
+  width: 100%;
+  background-color: green;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: 20px;
+}
+
+#checkoutBtn:hover {
+  background-color: darkgreen;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  position: relative;
+  max-height: 80vh; /* Limit modal height to 80% of the viewport height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  width: 90%; /* Adjust width as needed */
+  max-width: 500px; /* Limit maximum width */
+}
+
+.modal-content .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Ensure buttons stay at the bottom of the modal */
+.modal-buttons {
+  position: sticky;
+  bottom: 0;
+  background-color: white;
+  padding: 10px 0;
+  border-top: 1px solid #ddd;
+}
+
+/* QR Code Modal Styles */
+#qrModal img {
+  margin-bottom: 20px;
+}
+
+#confirmPaymentBtn {
+  background-color: green;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#confirmPaymentBtn:hover {
+  background-color: darkgreen;
+}
+
+/* Receipt Modal Styles */
+#receiptModal h2 {
+  margin-bottom: 20px;
+}
+
+#receiptDetails {
+  margin-bottom: 20px;
+}
+
+#continueShoppingBtn {
+  background-color: green;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#continueShoppingBtn:hover {
+  background-color: darkgreen;
+}
+
+/* Receipt Item Styles */
+.receipt-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+.receipt-item img {
+  width: 100px;
+  height: 150px;
+  border-radius: 8px;
+}
+
+.receipt-item-details {
+  flex-grow: 1;
+}
+
+.receipt-item-details span {
+  font-size: 16px;
+  color: #333;
+}
+
+/* Download Receipt Button Styles */
+#downloadReceiptBtn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+#downloadReceiptBtn:hover {
+  background-color: #0056b3;
+}

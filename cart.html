@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="cart.css">
+  <title>Cart</title>
+  <!-- Include jsPDF Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html"><img src="Images/LOGO.png" alt="logo"></a>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a href="index.html" class="me-3 text-decoration-none text-dark" style="color: #28f067;">
+          <i class="bi bi-house-door me-1"></i> Home
+        </a>&nbsp;&nbsp;
+        <a class="nav-link" href="cart.html" style="color:  #28f067;">Cart (<span id="cart-count">0</span>)</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="container mt-5">
+    <h2>Shopping Cart</h2>
+    <div id="cart-items"></div>
+    <p id="empty-cart-message">Your cart is empty. Start shopping now!</p>
+    <p id="totalAmount">Total: Rs. 0</p>
+    <button id="checkoutBtn" onclick="checkout()">Checkout</button>
+  </div>
+
+  <!-- QR Code Popup Modal -->
+  <div id="qrModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeQRModal()">&times;</span>
+      <img src="Images/qr.jpg" alt="QR Code" style="width: 300px; height: 300px;">
+      <br><br>
+      <div class="modal-buttons">
+        <button id="confirmPaymentBtn" onclick="confirmPayment()">Confirm Payment</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bill Receipt Popup Modal -->
+  <div id="receiptModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeReceiptModal()">&times;</span>
+      <img src="Images/LOGO.png" alt="logo" style="width: 200px; height: 100px;">
+      <h2>Order Confirmed!! <br>Thank You For Shopping With Us!!!</h2>
+      <div id="receiptDetails"></div>
+      <h3>We will deliver your items as soon as possible!!!</h3>
+      <div class="modal-buttons">
+        <button id="downloadReceiptBtn" onclick="downloadReceipt()">Download Invoice</button>
+        <button id="continueShoppingBtn" onclick="continueShopping()">Continue Shopping</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Confirmation Modal for Removing Items -->
+  <div id="confirmationModal" class="modal">
+    <div class="modal-content">
+      <p>Are you sure you want to remove this item?</p>
+      <button class="confirm" onclick="confirmRemove()">Yes</button>
+      <button class="cancel" onclick="cancelRemove()">No</button>
+    </div>
+  </div>
+
+  <script src="cart.js"></script>
+</body>
+</html>
